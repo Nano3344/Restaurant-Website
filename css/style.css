@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Michland;
+  src: url('/fonts/Michland.otf');
+}
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0px 80px 0px;
+  color: white;
+  font-family: sans-serif;
+  z-index: 1;
+}
+header h2 {
+  font-family: Michland;
+  font-size: 45px;
+}
+header nav a{
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 17px;
+}
+
+/* Main Page */
+
+.black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+#Home .image-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-size: cover;
+background-position: center;
+z-index: -1;
+}
+#Home {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#Home .middle-section {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+#Home .middle-section h1{
+  font-family: michland;
+  font-size: 50px;
+  padding: 30px 90px 30px;
+}
+#Home .middle-section h3{
+  font-size: 20px;
+  padding: 20px 90px 30px;
+  font-family: sans-serif;
+}
+#Home .middle-section a {
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 30px 10px;
+}
+#Home .middle-section a:hover {
+  background-color: #EF6C00;
+  border: 2px solid #EF6C00;
+  transition: 0.5s;
+}
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #424242;
+  color: white;
+  font-family: monospace;
+  padding: 15px 0 15px;
+}
+
+/* Menu Page */
+
+#Menu .image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+#Menu {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+#Menu .middle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  font-family: michland;
+  font-size: 40px;
+}
+hr {
+  width: 30%;
+}
+.main-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.main-menu img {
+  width: 200px;
+}
+.main-menu .row-1 {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.main-menu .row-2 {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.main-menu .row-3 {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+/* About-Us Page */
+
+#About .image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+#About {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+#About .middle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  font-family: michland;
+  font-size: 40px;
+}
+hr {
+  width: 30%;
+}
+.main-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60vh;
+}
+.main-text div {
+  width: 50%;
+  text-align: center;
+}
+.main-text div p {
+}
+/* Contact Page */

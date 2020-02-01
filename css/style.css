@@ -28,6 +28,7 @@ header nav a{
   text-decoration: none;
   padding: 20px;
   font-size: 17px;
+  font-weight: bolder;
 }
 
 /* Main Page */
@@ -149,13 +150,26 @@ hr {
   font-weight: bolder;
   text-align: center;
 }
+.main-menu .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
 .main-menu .order-now {
   margin-top: 10px;
-  color: white;
+  color: #EF6C00;
   padding: 10px 20px;
-  background-color: #EF6C00;
+  border: 3px solid #EF6C00;
   border-radius: 4px;
   width: 140px;
+  transition: 0.5s;
+}
+.main-menu .order-now:hover {
+  color: white;
+  border: 3px solid #EF6C00;
+  background-color: #EF6C00;
+  transition: 0.5s;
 }
 .main-menu .order-now:hover {
  cursor: pointer;
@@ -211,15 +225,24 @@ hr {
 }
 .main-text {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 60vh;
+  font-family: Raleway;
 }
 .main-text div {
   width: 50%;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  font-weight: bolder;
 }
-.main-text div p {
+.main-text .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 /* Contact Section */
@@ -248,6 +271,67 @@ hr {
   z-index: 1;
   font-family: michland;
   font-size: 40px;
+}
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-container {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+}
+.contact-container h2 {
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+.contact-container .input-section {
+  padding-top: 20px;
+}
+.contact-container .input-section input[type="text"] {
+  width: 300px;
+  padding: 10px;
+}
+.contact-container .message-section {
+  padding-top: 20px;
+}
+.contact-container .message-section textarea[type="text"] {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  resize: none;
+}
+.contact-container .button-section {
+  width: 100px;
+  margin-top: 20px;
+  font-family: Raleway;
+  color: white;
+  font-weight: bolder;
+  padding: 10px 20px;
+  background-color: #EF6C00;
+  border-radius: 5px;
+  text-align: center;
+}
+.contact-info {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 hr {
   width: 30%;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- Header -->
     <header>
       <h2>Luigi's</h2>
       <nav>
@@ -14,18 +15,52 @@
         <a href="Menu.html">Menu</a>
         <a href="About-Us.html">About Us</a>
         <a href="Contact.html">Contact</a>
+        <img class="Cart" src="img/cart-outline.png">
       </nav>
     </header>
-    <div class="black">
+    <div class="Cart-window">
+      <div class="Cart-item">
+        <img src="">
+        <div class="Cart-info">
+        <p class="Food-name">Pizza</p>
+        <p class="Food-price">10.00$</p>
+      </div>
+      <span>X</span>
+      </div>
+      <div class="Cart-item">
+        <img src="">
+        <div class="Cart-info">
+        <p class="Food-name">Lasagna</p>
+        <p class="Food-price">10.00$</p>
+      </div>
+       <span>X</span>
+      </div>
+      <div class="Cart-clear">
+        <p>Clear Cart</p>
+      </div>
+      <div class="Cart-buy">
+        <p>Order Now</p>
+      </div>
     </div>
+    <div class="black">
+
+    </div>
+    <div class="red" style="background-image: url(img/background.jpg)">
+    </div>
+    <!-- Home -->
     <section id="Home">
-      <div class="image-background" style="background-image: url(img/main.jpg)"></div>
-      <div class="middle-section">
-         <h1>Luigi's Restaurant</h1>
-         <h3>Fresh and always with 100% quality</h3>
-         <a href="Menu.html">Order Now</a>
+      <div class="circle"></div>
+      <div class="Image-section">
+         <img class="image" src="img/pizza.png" alt="">
+      </div>
+      <div class="Text-section">
+          <h3>A truly italian Experience</h3>
+          <div class="button">
+            <a href="Menu.html">Our Food</a>
+          </div>
       </div>
     </section>
+    <!-- Footer -->
     <footer>
       <div class="social-media">
         <a href="https://www.instagram.com/malik_ebers/"><img src="./img/instagram.png"></a>
@@ -37,5 +72,10 @@
      <p>Created by Malik Ebers</p>
    </footer>
   <script src="./js/index.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script>
+     gsap.from('.image', {opacity: 0, duration: 1, x: -100, rotation: 180})
+     gsap.from('.Text-section', {duration: 1, opacity: 0})
+  </script>
   </body>
 </html>

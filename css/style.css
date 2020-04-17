@@ -7,6 +7,10 @@
   font-family: Michland;
   src: url('/fonts/Michland.otf');
 }
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/Montserrat.ttf');
+}
 header {
   position: absolute;
   display: flex;
@@ -14,10 +18,10 @@ header {
   align-items: center;
   width: 100%;
   height: 90px;
-  padding: 0px 80px 0px;
+  padding: 0px 120px 0px;
   color: white;
   font-family: sans-serif;
-  z-index: 1;
+  z-index: 3;
 }
 header h2 {
   font-family: Michland;
@@ -26,9 +30,86 @@ header h2 {
 header nav a{
   color: white;
   text-decoration: none;
+  font-family: Montserrat;
   padding: 20px;
   font-size: 17px;
-  font-weight: bolder;
+}
+header nav img {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+/* Shopping Cart */
+
+.Cart-window {
+  z-index: 1;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  font-family: Raleway;
+  padding: 0px;
+}
+.Cart-show {
+  width: 250px;
+  padding: 10px;
+}
+.Cart-window .Cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  padding: 10px;
+}
+.Cart-window .Cart-item img {
+  width: 40px;
+}
+.Cart-window .Cart-item .Cart-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Cart-window .Cart-item span {
+  cursor: pointer;
+  background-color: #F44336;
+  color: white;
+  padding: 5px;
+}
+.Cart-window .Cart-total {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.Cart-window .Cart-total p:nth-child(1) {
+  font-weight: bold;
+}
+.Cart-window .Cart-clear {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.Cart-window .Cart-buy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #EF6C00;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Main Page */
@@ -38,51 +119,78 @@ header nav a{
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.7;
 }
-#Home .image-background {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100vh;
-background-size: cover;
-background-position: center;
-z-index: -1;
+.red {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 #Home {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  min-height: 100vh;
+  justify-content: space-between;
+}
+#Home .Image-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-#Home .middle-section {
-  text-align: center;
+#Home .Text-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: white;
-  z-index: 1;
+  z-index: 2;
 }
-#Home .middle-section h1{
-  font-family: michland;
-  font-size: 50px;
-  padding: 30px 90px 30px;
+#Home .Text-section h2{
+   font-family: Michland;
+   font-size: 70px;
+   padding: 10px;
 }
-#Home .middle-section h3{
-  font-size: 20px;
-  padding: 20px 90px 30px;
-  font-family: sans-serif;
+#Home .Text-section h3{
+   font-family: Michland;
+   font-size: 100px;
+   padding: 10px;
 }
-#Home .middle-section a {
-  color: white;
+#Home .Text-section .button {
+  margin-top: 10px;
+}
+#Home .Text-section .button a{
   text-decoration: none;
-  font-family: monospace;
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 10px 30px 10px;
-}
-#Home .middle-section a:hover {
+  font-family: sans-serif;
   background-color: #EF6C00;
-  border: 2px solid #EF6C00;
-  transition: 0.5s;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Mobile Screen */
+
+@media (max-width: 800px) {
+  #Home {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #Home .Image-section {
+    position: relative;
+    width: 100%;
+    height: 40%;
+  }
+  #Home .Image-section img {
+    width: 400px;
+  }
+  #Home .Text-section {
+    height: 30%;
+    width: 100%;
+  }
 }
 footer {
   display: flex;

@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luigi's Restaurant</title>
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
   </head>
   <body>
     <header>
@@ -13,8 +14,37 @@
         <a href="Menu.html">Menu</a>
         <a href="About-Us.html">About Us</a>
         <a href="Contact.html">Contact</a>
+        <img class="Cart" src="img/cart-outline.png">
       </nav>
     </header>
+    <div class="Cart-window">
+      <div class="Cart-item">
+        <img src="img/pizza.jpg">
+        <div class="Cart-info">
+        <p class="Food-name">Pizza</p>
+        <p class="Food-price">10.00$</p>
+      </div>
+      <span>X</span>
+      </div>
+      <div class="Cart-item">
+        <img src="img/shrimp.jpg">
+        <div class="Cart-info">
+        <p class="Food-name">Shrimp</p>
+        <p class="Food-price">10.00$</p>
+      </div>
+       <span>X</span>
+      </div>
+      <div class="Cart-total">
+         <p>Total:</p>
+         <p>10,00$</p>
+      </div>
+      <div class="Cart-clear">
+        <p>Clear Cart</p>
+      </div>
+      <div class="Cart-buy">
+        <p>Order Now</p>
+      </div>
+    </div>
     <div class="black"></div>
     <section id="Menu">
       <div class="image-background" style="background-image: url(img/menu.jpg)"></div>
@@ -67,7 +97,7 @@
            <p>Shrimp</p>
            <p>15,70$</p>
          </div>
-         <p class="order-now">Add to Cart</p>
+         <p id="order-now" class="order-now">Add to Cart</p>
       </div>
       <div class="pasta food">
          <img src="img/pasta.jpg" alt="">
@@ -89,5 +119,6 @@
     </div>
    <p>Created by Malik Ebers</p>
  </footer>
+ <script src="./js/index.js"></script>
   </body>
 </html>

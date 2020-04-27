@@ -102,8 +102,8 @@ header {
   z-index: 3;
 }
 header h2 {
-  font-family: Michland;
-  font-size: 50px;
+  font-family: Raleway;
+  font-size: 30px;
   color: #FAFAFA;
 }
 header nav a{
@@ -178,8 +178,8 @@ header nav img {
    padding: 10px;
 }
 #Home .Text-section h3{
-   font-family: Michland;
-   font-size: 100px;
+   font-family: Raleway;
+   font-size: 80px;
    padding: 10px;
 }
 #Home .Text-section .button {

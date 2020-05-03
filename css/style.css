@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
+body:not(#Menu) {
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -18,7 +18,7 @@ body {
 /* Shopping Cart */
 
 .Cart-window {
-  z-index: 1;
+  z-index: 3;
   width: 0;
   overflow: hidden;
   position: absolute;
@@ -106,6 +106,12 @@ header h2 {
   font-size: 30px;
   color: #FAFAFA;
 }
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
 header nav a{
   color: #212121;
   text-decoration: none;
@@ -114,13 +120,14 @@ header nav a{
   font-size: 17px;
 }
 header nav img {
-  position: absolute;
-  bottom: 20px;
-  padding: 10px;
+  margin-left: 15px;
   cursor: pointer;
-  width: 20px;
 }
-
+.Home-wrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
 .black {
   position: absolute;
   width: 100%;
@@ -138,7 +145,7 @@ header nav img {
   transform: rotate(45deg);
   z-index: 0;
 }
-.red {
+.grey-background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -172,11 +179,6 @@ header nav img {
   color: #212121;
   z-index: 2;
 }
-#Home .Text-section h2{
-   font-family: Michland;
-   font-size: 70px;
-   padding: 10px;
-}
 #Home .Text-section h3{
    font-family: Raleway;
    font-size: 80px;
@@ -196,10 +198,67 @@ header nav img {
 
 /* Mobile Screen */
 
+header .mobile-wrapper {
+  display: none;
+}
+header .mobile-nav {
+  width: 0px;
+  height: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+header .mobile-nav .line {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #212121;
+}
+
+/* Mobile */
+
 @media (max-width: 800px) {
+  .background-cube {
+    top: -78%;
+    right: -50%;
+    transform: rotate(55deg);
+  }
+  header {
+    padding: 0px 60px 0px;
+  }
+  header nav {
+    display: none;
+  }
+  header .mobile-wrapper {
+    display: block;
+  }
+  header .mobile-nav {
+    width: 60px;
+    height: 25px;
+  }
+  header .mobile-nav .line {
+    background-color: white;
+  }
+  .Home-wrapper {
+    overflow-y: hidden;
+  }
   #Home {
     flex-direction: column;
     justify-content: center;
+  }
+  #Home .Text-section {
+    height: 30%;
+    width: 100%;
+  }
+  #Home .Text-section h3{
+     font-size: 40px;
+  }
+  #Home .Text-section .button a{
+     background-color: white;
+     color: #212121;
+     border: 3px solid #212121;
   }
   #Home .Image-section {
     position: relative;
@@ -207,25 +266,22 @@ header nav img {
     height: 40%;
   }
   #Home .Image-section img {
-    width: 400px;
-  }
-  #Home .Text-section {
-    height: 30%;
-    width: 100%;
+    width: 360px;
   }
 }
+
+/* footer */
+
 footer {
   display: flex;
   width: 100%;
+  height: 15vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #424242;
-  color: white;
   font-family: monospace;
   padding: 15px 0 15px;
 }
-
 /* Menu Page */
 
 #Menu .image-background {
@@ -239,6 +295,7 @@ footer {
   z-index: -1;
 }
 #Menu {
+  overflow-y: visible;
   display: flex;
   min-height: 100vh;
   align-items: center;

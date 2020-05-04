@@ -8,11 +8,25 @@
   </head>
   <body>
 
+    <!-- full nav -->
+    <div class="Nav-wrapper">
+    <span class="Nav-close">X</span>
+    <div class="Navigation-2">
+      <nav>
+      <a href="index.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="About-Us.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+      <img class="Cart" src="img/cart.png">
+    </nav>
+    </div>
+  </div>
+
     <!-- Header -->
 
     <header>
       <h2>Luigi's</h2>
-      <nav>
+      <nav class="Navigation">
         <a href="index.html">Home</a>
         <a href="Menu.html">Menu</a>
         <a href="About-Us.html">About Us</a>
@@ -86,6 +100,7 @@
   <script>
      gsap.from('.image', {opacity: 0, duration: 1, x: -100, rotation: 180})
      gsap.from('.Text-section', {duration: 1, opacity: 0})
+     gsap.from('header', {duration: 2, opacity: 0})
   </script>
 
 

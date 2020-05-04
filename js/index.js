@@ -29,7 +29,7 @@
 
         const carttotal = document.querySelector('.Cart-total');
         const cartwindow = document.querySelector('.Cart-window');
-        cartwindow.insertBefore(clearBtn, );
+        cartwindow.insertBefore(clearBtn, carttotal);
         alert(`${item.name} was added to the cart`);
         totalValue();
       }
@@ -60,3 +60,13 @@
        allItems.remove();
   });
 })();
+
+// Full Navigation
+
+const navBurger = document.querySelector('.mobile-nav');
+const normalNav = document.querySelector('.Navigation-2');
+const navWrapper = document.querySelector('.Nav-wrapper');
+
+navBurger.addEventListener('click', function() {
+  navWrapper.style.display = 'block';
+});

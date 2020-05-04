@@ -29,7 +29,7 @@
 
         const carttotal = document.querySelector('.Cart-total');
         const cartwindow = document.querySelector('.Cart-window');
-        cartwindow.insertBefore(newCartItem, carttotal);
+        cartwindow.insertBefore(clearBtn, );
         alert(`${item.name} was added to the cart`);
         totalValue();
       }

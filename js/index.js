@@ -1,3 +1,18 @@
+const navBurger = document.querySelector('.mobile-nav');
+const normalNav = document.querySelector('.Navigation-2');
+const navWrapper = document.querySelector('.Nav-wrapper');
+const closeButton = document.querySelector('.closeNav');
+
+navBurger.addEventListener('click', openNav);
+closeButton.addEventListener('click', closeNav);
+
+function openNav() {
+  navWrapper.style.display = 'block';
+}
+function closeNav() {
+  navWrapper.style.display = 'none';
+}
+
 (function (){
   const cart = document.querySelector('.Cart');
   const cartWindow = document.querySelector('.Cart-window');
@@ -29,7 +44,7 @@
 
         const carttotal = document.querySelector('.Cart-total');
         const cartwindow = document.querySelector('.Cart-window');
-        cartwindow.insertBefore(clearBtn, carttotal);
+        cartwindow.insertBefore(newCartItem, cartwindow.firstChild);
         alert(`${item.name} was added to the cart`);
         totalValue();
       }
@@ -60,13 +75,3 @@
        allItems.remove();
   });
 })();
-
-// Full Navigation
-
-const navBurger = document.querySelector('.mobile-nav');
-const normalNav = document.querySelector('.Navigation-2');
-const navWrapper = document.querySelector('.Nav-wrapper');
-
-navBurger.addEventListener('click', function() {
-  navWrapper.style.display = 'block';
-});

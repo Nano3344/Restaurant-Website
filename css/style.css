@@ -88,12 +88,13 @@ header .mobile-nav .line {
   align-items: center;
   flex-direction: row;
 }
-.Navigation-2 .Nav-close span{
+.Navigation-2 .closeNav {
   position: absolute;
   cursor: pointer;
-  right: 0px;
+  right: 20px;
+  top: 0px;
   color: black;
-  font-size: 30px;
+  font-size: 60px;
   font-family: Raleway;
 }
 .Navigation-2 nav {

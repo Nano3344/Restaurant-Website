@@ -74,6 +74,7 @@ header .mobile-nav .line {
 }
 
 /* Full Nav Class */
+
 .Nav-wrapper {
   display: none;
 }
@@ -110,26 +111,37 @@ header .mobile-nav .line {
   color: #212121;
   text-decoration: none;
 }
+
 /* Shopping Cart */
 
 .Cart-window {
-  z-index: 3;
+  z-index: 4;
   width: 0;
   overflow: hidden;
   position: absolute;
-  top: 90px;
-  right: 0;
+  top: 0px;
+  right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: #FAFAFA;
   font-family: Raleway;
   padding: 0px;
 }
 .Cart-show {
   width: 250px;
+  height: 100vh;
   padding: 10px;
+}
+.Cart-window .close {
+  position: absolute;
+  font-size: 30px;
+  top: 20px;
+  right: 30px;
+  font-family: Raleway;
+  font-weight: bold;
+  cursor: pointer;
 }
 .Cart-window .Cart-item {
   display: flex;
